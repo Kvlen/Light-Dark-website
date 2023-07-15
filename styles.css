@@ -14,8 +14,9 @@ nav {
 
 .navbar-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 0;
 }
 
 .nav-links {
@@ -35,22 +36,60 @@ nav {
 
 /* Dark/Light Mode Toggle */
 .mode-toggle {
-  margin-left: auto;
   display: flex;
   align-items: center;
+  margin-left: auto; /* Move the toggle to the right side */
+}
+
+.mode-toggle input[type="checkbox"] {
+  display: none; /* Hide the checkbox */
+}
+
+.mode-toggle-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .toggle-text {
-  margin-right: 10px;
+  margin-right: 5px;
   font-size: 14px;
 }
 
-.sun-icon {
-  margin-right: 5px;
-}
-
+.sun-icon,
 .moon-icon {
   margin-right: 5px;
+  font-size: 18px;
+}
+
+.mode-toggle .slider {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.mode-toggle .slider:before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s;
+}
+
+.mode-toggle input[type="checkbox"]:checked + .slider {
+  background-color: #2196f3;
+}
+
+.mode-toggle input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(16px);
 }
 
 /* Main Heading Styles */
@@ -58,22 +97,28 @@ h2 {
   font-size: 24px;
   color: #333;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 h3 {
   font-size: 18px;
   color: #666;
   margin: 0;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 /* Dark Mode Styles */
 body.dark-mode {
-  background-color: #333;
+  /* background-color: #333; */
   color: #fff;
-}
-
-nav.dark-mode {
-  background-color: #222;
 }
 
 .nav-links li a {
@@ -90,7 +135,7 @@ h3.dark-mode {
 
 /* Light Mode Styles */
 body.light-mode {
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #333;
 }
 
@@ -137,8 +182,8 @@ h3.light-mode {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 46px;
+  height: 23px;
 }
 
 .switch input {
@@ -162,9 +207,9 @@ h3.light-mode {
 .slider:before {
   position: absolute;
   content: '';
-  height: 26px;
-  width: 26px;
-  left: 4px;
+  height: 16px;
+  width: 16px;
+  left: 2px;
   bottom: 4px;
   background-color: white;
   transition: 0.4s;
@@ -185,4 +230,32 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* Light Mode Background */
+body.light-mode {
+  background-image: url('/Coding/Sublime_text/TOP/git_repos/Light-Dark-website/images/Green.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Dark Mode Background */
+body.dark-mode {
+  background-image: url('/Coding/Sublime_text/TOP/git_repos/Light-Dark-website/images/Water.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Light Mode Navbar Background */
+nav.light-mode {
+  background-image: url('/Coding/Sublime_text/TOP/git_repos/Light-Dark-website/images/Water.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Dark Mode Navbar Background */
+nav.dark-mode {
+  background-image: url('/Coding/Sublime_text/TOP/git_repos/Light-Dark-website/images/Water.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
