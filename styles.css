@@ -42,7 +42,7 @@ nav {
 }
 
 .mode-toggle input[type="checkbox"] {
-  display: none; /* Hide the checkbox */
+  display: none; /* Hides the checkbox */
 }
 
 .mode-toggle-label {
@@ -94,15 +94,14 @@ nav {
 
 /* Main Heading Styles */
 h2 {
-  font-size: 24px;
-  color: #333;
+  font-size: 60px;
   margin-bottom: 10px;
   text-align: center;
+  font-family: 'Chela One', cursive;
 }
 
 h3 {
   font-size: 18px;
-  color: #666;
   margin: 0;
   text-align: center;
 }
@@ -117,26 +116,29 @@ main {
 
 /* Dark Mode Styles */
 body.dark-mode {
-  /* background-color: #333; */
+  background-color: #333;
   color: #fff;
 }
 
 .nav-links li a {
-  color: #fff;
+  color: #ffffff;
 }
 
 h2.dark-mode {
+  font-size: 24px;
   color: #fff;
+  font-family: 'Chela One', cursive;
 }
 
 h3.dark-mode {
+  font-size: 18px;
   color: #ccc;
+  font-family: 'Arial', sans-serif;
 }
 
 /* Light Mode Styles */
 body.light-mode {
-  /* background-color: #fff; */
-  color: #333;
+  background-color: #fff;
 }
 
 nav.light-mode {
@@ -148,11 +150,15 @@ nav.light-mode {
 }
 
 h2.light-mode {
+  font-size: 24px;
   color: #333;
+  font-family: 'Chela One', cursive;
 }
 
 h3.light-mode {
+  font-size: 18px;
   color: #666;
+  font-family: 'Arial', sans-serif;
 }
 
 /* Quote Box Styles */
@@ -234,28 +240,14 @@ input:checked + .slider:before {
 
 /* Light Mode Background */
 body.light-mode {
-  background-image: url('/Coding/Sublime_text/TOP/git_repos/Light-Dark-website/images/Green.jpg');
+  background-image: url('/Coding/Sublime_text/TOP/git_repos/Light-Dark-website/images/Water.jpg') !important;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* Dark Mode Background */
 body.dark-mode {
-  background-image: url('/Coding/Sublime_text/TOP/git_repos/Light-Dark-website/images/Water.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Light Mode Navbar Background */
-nav.light-mode {
-  background-image: url('/Coding/Sublime_text/TOP/git_repos/Light-Dark-website/images/Water.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Dark Mode Navbar Background */
-nav.dark-mode {
-  background-image: url('/Coding/Sublime_text/TOP/git_repos/Light-Dark-website/images/Water.jpg');
+  background-image: url('/Coding/Sublime_text/TOP/git_repos/Light-Dark-website/images/galaxy.jpg') !important;
   background-repeat: no-repeat;
   background-size: cover;
 }
